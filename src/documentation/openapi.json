@@ -1,0 +1,102 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "Application",
+        "version": "0.0.1",
+        "description": "To use the API you must first sign-in using the `POST /auth/sign-in` endpoint and collect the **Bearer token** from the response.\n"
+    },
+    "servers": [
+        {
+            "url": "/api"
+        }
+    ],
+    "paths": {
+        "/nfse/json": {
+            "post": {                
+                "tags": [
+                    "Leitura nfs-e"
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "data"
+                                ],
+                                "properties": {
+                                    "data": {
+                                        "$ref": "#/components/schemas/Nfse"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Nfse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/nfse/xml": {
+            "post": {
+                "tags": [
+                    "Leitura nfs-e"
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/xml": {
+                            "schema": {
+                                "type": "xml",
+                                "required": [
+                                    "data"
+                                ],
+                                "properties": {
+                                    "data": {
+                                        "$ref": "#/components/schemas/Nfse"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Nfse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Nfse": {
+                "type": "object",
+                "properties": {
+                    "xml": {
+                        "type": "object"
+                    }
+                }
+            }
+            
+        }
+    }
+}
