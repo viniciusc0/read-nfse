@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nodemon --watch \"src/**/*.ts\" -e ts,json --exec \"ts-node --transpile-only ./src/server.ts\"",
     "test": "nodemon --exec \"cross-env NODE_ENV=test mocha -r ts-node/register ./src/**/*.test.ts --exit || exit 1\"",
-    "build:documentation": "copyfiles --flat ./src/documentation/openapi.json ./dist/documentation/",
+    "build:documentation": "copyfiles --flat ./src/swagger/openapi.json ./dist/swagger/",
     "build": "tsc && npm run build:documentation"
   },
   "dependencies": {

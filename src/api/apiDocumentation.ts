@@ -13,7 +13,7 @@ export default function setupSwaggerUI(app) {
   ) {
     res.sendFile(
       path.resolve(
-        __dirname + '/../documentation/openapi.json',
+        __dirname + '/../swagger/openapi.json',
       ),
     );
   };
