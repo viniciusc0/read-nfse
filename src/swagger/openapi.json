@@ -3,7 +3,7 @@
     "info": {
         "title": "Application",
         "version": "0.0.1",
-        "description": "To use the API you must first sign-in using the `POST /auth/sign-in` endpoint and collect the **Bearer token** from the response.\n"
+        "description": "Rotas para leitura de XMLs\n"
     },
     "servers": [
         {
