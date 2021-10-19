@@ -1,9 +1,9 @@
 version: '3'
 
 services:
-  xml-nfce-api:
+  xreadnfse:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "81:80"
+      - "81:8080"
