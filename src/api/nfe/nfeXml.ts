@@ -42,3 +42,4 @@ export default async (req, res, next) => {
     await ApiResponseHandler.error(req, res, error);
   }
 };
+
